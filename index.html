@@ -45,11 +45,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
 h1,h2,h3{margin:0;word-break:keep-all;text-wrap:balance;font-weight:700;line-height:1.28;letter-spacing:-.022em}
-h1{font-size:clamp(32px,5.2vw,52px);font-weight:800;letter-spacing:-.032em}
+h1{font-size:min(calc((100vw - 46px)/18.2),48px);font-weight:800;letter-spacing:-.032em;white-space:nowrap;background:linear-gradient(100deg,#FFFDF8 0%,#F0E4C8 42%,#C9A96A 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 h2{font-size:clamp(23px,2.6vw,28px);margin-bottom:6px}
 h3{font-size:18px;margin-bottom:6px;letter-spacing:-.018em}
 p{margin:0 0 14px;max-width:64ch}
-.wrap{max-width:900px;margin:0 auto;padding:0 22px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
 .lede{color:var(--muted)}
 
 /* 눈금 라벨 */
@@ -198,7 +198,7 @@ footer .rule{width:34px;height:1px;background:var(--gold);margin-bottom:18px;opa
 
   <div class="hero">
     <div class="kicker">맥 · 윈도우 · 내 컴퓨터에서 실행</div>
-    <h1>자동 생성 영상 → 유튜브 쇼츠 · 인스타 · 스레드 자동 업로드</h1>
+    <h1>유튜브 쇼츠 · 인스타 · 스레드 자동 업로드</h1>
     <p class="lead">제품 영상을 넣고 「실행」을 누르면 영상 분석 → 쿠팡 제품 찾기 → 대본 → 세로 변환 → 음성 → 자막 → 썸네일 → 게시 전 검수 → 업로드까지 혼자 갑니다. 실시간 검색어로 속보 영상을 만드는 기능도 함께 들어 있습니다.</p>
     <div class="actions">
       <a class="btn btn-primary" href="https://github.com/leetrip4171-gif/ytauto-site/releases/latest/download/ytauto_latest.zip"><span class="ico">↓</span>프로그램 내려받기 (zip)</a>
