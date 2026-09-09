@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>유튜브영상자동화시스템</title>
 <meta name="description" content="영상 하나 넣으면 쇼핑쇼츠·속보 영상을 만들어 유튜브에 올려 주는 프로그램. 맥·윈도우에서 내 컴퓨터로 돌아갑니다.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
   --bg:#F3F6F2; --surface:#FFFFFF; --ink:#152019; --muted:#56655C; --line:#D8E0D9;
   --accent:#1F7A4D; --accent2:#7BC043; --accent-ink:#0E4A2E; --soft:#E6F1E8;
   --warn-bg:#FFF4E0; --warn-ink:#7A4B00; --code:#EEF2EE;
-  --display:"Gowun Batang","Noto Serif KR",serif; --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    --font:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif; --display:var(--font); --body:var(--font);
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
@@ -24,7 +24,7 @@
   --accent:#6FCB8A; --accent2:#B8E36A; --accent-ink:#DFF5E4; --soft:#1F2D25;
   --warn-bg:#3A2A10; --warn-ink:#F3D08A; --code:#1E2A23; color-scheme:dark; }
 
-*{box-sizing:border-box}
+*{box-sizing:border-box} button,input,select,textarea{font-family:inherit}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
