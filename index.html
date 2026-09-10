@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>유튜브 영상 자동화 시스템</title>
-<meta name="description" content="제품 영상 하나를 넣으면 쇼핑쇼츠·속보 영상을 만들어 유튜브 쇼츠로 올려 주는 프로그램. 맥·윈도우, 내 컴퓨터에서 돌아갑니다.">
+<meta name="description" content="제품 영상 하나를 넣으면 쇼핑쇼츠·속보 영상을 만들어 유튜브 쇼츠로 올려 주는 프로그램. 인스타·스레드는 선택. 맥·윈도우, 내 컴퓨터에서 돌아갑니다.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
@@ -201,7 +201,7 @@ footer p{max-width:none}
   <div class="hero">
     <div class="kicker">맥 · 윈도우 · 내 컴퓨터에서 실행</div>
     <h1>유튜브 쇼츠 · 속보 영상 자동 업로드</h1>
-    <p class="lead">제품 영상을 넣고 「실행」을 누르면 영상 분석 → 쿠팡 제품 찾기 → 대본 → 세로 변환 → 음성 → 자막 → 썸네일 → 게시 전 검수 → 업로드까지 혼자 갑니다. 실시간 검색어로 속보 영상을 만드는 기능도 함께 들어 있습니다. 지금 배포본이 올리는 곳은 <b>유튜브</b>입니다.</p>
+    <p class="lead">제품 영상을 넣고 「실행」을 누르면 영상 분석 → 쿠팡 제품 찾기 → 대본 → 세로 변환 → 음성 → 자막 → 썸네일 → 게시 전 검수 → 업로드까지 혼자 갑니다. 실시간 검색어로 속보 영상을 만드는 기능도 함께 들어 있습니다. 올리는 곳은 <b>유튜브</b>이고, 인스타 릴스·스레드는 키를 넣으면 함께 올라갑니다(선택).</p>
     <div class="actions">
       <a class="btn btn-primary" href="https://github.com/leetrip4171-gif/ytauto-site/releases/latest/download/ytauto_latest.zip"><span class="ico">↓</span>프로그램 내려받기 (zip)</a>
       <a class="btn btn-ghost" href="#what">무엇을 만들어 주나</a>
@@ -243,12 +243,12 @@ footer p{max-width:none}
     <div class="sec-head">
       <div class="kicker">게시</div>
       <h2>만든 영상이 올라가는 곳</h2>
-      <p>유튜브 채널을 한 번 연결해 두면, 만든 영상을 쇼츠 규격에 맞춰 그대로 올립니다.</p>
+      <p>유튜브는 채널만 연결하면 바로 올라갑니다. 인스타·스레드는 <b>선택</b>입니다 — 키를 넣으면 유튜브 다음에 이어서 올리고, 비워 두면 유튜브에만 올립니다.</p>
     </div>
     <div class="plat">
       <span><i>▶</i>유튜브 쇼츠</span>
-      <span style="opacity:.55"><i>◉</i>인스타그램 릴스 — 예정</span>
-      <span style="opacity:.55"><i>@</i>스레드 — 예정</span>
+      <span><i>◉</i>인스타그램 릴스 <span class="chip">선택</span></span>
+      <span><i>@</i>스레드 <span class="chip">선택</span></span>
     </div>
     <div class="grid3" style="margin-top:16px">
       <div class="card">
@@ -265,6 +265,7 @@ footer p{max-width:none}
       </div>
     </div>
     <div class="note"><b>공개 범위:</b> 익숙해질 때까지는 「일부공개」로 올려 두고, 확인한 뒤 직접 공개로 바꾸는 쪽을 권합니다.</div>
+    <div class="note"><b>인스타·스레드는 v2.0에 새로 들어왔습니다.</b> 코드는 들어 있고 문구·영상 검사까지 확인했지만, <b>실제 게시는 아직 검증 중</b>입니다. 유튜브 게시에는 영향을 주지 않습니다 — 키를 비워 두면 아예 동작하지 않습니다.</div>
   </section>
 
   <section id="smart">
@@ -307,6 +308,8 @@ footer p{max-width:none}
         <tr><td>Gemini API 키</td><td class="req">필수</td><td><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> — 영상 분석·대본·제품 매칭·이미지에 씁니다 (무료 한도 있음)</td></tr>
         <tr><td>유튜브 채널</td><td class="req">필수</td><td>구글 계정으로 한 번 「허용」. 그 전에 <b class="hl">본인의 구글 클라우드에서 OAuth 앱을 만들어</b> <code>youtube_client_secret.json</code> 파일을 <code>config</code> 폴더에 넣어야 합니다 (만드는 방법은 매뉴얼)</td></tr>
         <tr><td>쿠팡파트너스 키</td><td class="req">쇼핑쇼츠</td><td><a href="https://partners.coupang.com" target="_blank" rel="noopener">partners.coupang.com</a> → 링크 생성 → API 키 발급 (Access · Secret 두 개)</td></tr>
+        <tr><td>Meta 계정</td><td class="opt">인스타·스레드</td><td>인스타그램을 <b>프로 계정</b>으로 바꾸고, Meta 개발자 콘솔에서 앱을 만들어 사용자 ID와 장기 토큰(60일)을 발급받습니다. 스레드도 따로 한 번 더</td></tr>
+        <tr><td>Cloudflare R2</td><td class="opt">인스타·스레드</td><td>인스타·스레드는 <b>공개 영상 주소</b>를 받아 가는 방식이라, 잠깐 올려 둘 자리가 필요합니다. 무료 한도 안에서 씁니다</td></tr>
         <tr><td>타입캐스트 키</td><td class="opt">선택</td><td><a href="https://typecast.ai" target="_blank" rel="noopener">typecast.ai</a> — 비우면 Gemini 음성으로 대신 만듭니다</td></tr>
         <tr><td>ffmpeg</td><td class="opt">자동</td><td>윈도우는 처음 실행 때 자동으로 내려받습니다(약 90MB). 맥은 터미널에서 <code>brew install ffmpeg</code></td></tr>
       </tbody>
@@ -319,7 +322,7 @@ footer p{max-width:none}
       </div>
       <div class="card">
         <h3>실전 제작형 <span class="chip">사용량 과금</span></h3>
-        <p>Gemini·타입캐스트를 쓴 만큼 각자 계정으로 과금됩니다. 프로그램 자체는 계속 무료입니다.</p>
+        <p>Gemini·타입캐스트를 쓴 만큼 각자 계정으로 과금됩니다. 인스타·스레드를 쓰면 R2 사용량이 조금 붙습니다(무료 한도 안). 프로그램 자체는 계속 무료입니다.</p>
       </div>
     </div>
   </section>
@@ -362,7 +365,7 @@ footer p{max-width:none}
       <li><b><code>input_videos</code> 폴더에 내 영상 넣기</b><p>mp4 또는 mov. 제품이 잘 보이는 10~60초 영상이 좋습니다.</p></li>
       <li><b>「쇼핑쇼츠」 탭에서 영상 고르고 「실행」</b><p>쿠팡 검색 키워드는 적어 주세요(쿠팡 주소는 비워도 됩니다). 후보를 보여 주니 영상 속 제품과 같은 것을 고르고 「이 제품으로 진행」을 누르세요.</p></li>
     </ol>
-    <div class="note"><b>쇼츠 썸네일:</b> 유튜브가 쇼츠 맞춤 썸네일을 자동으로 안 받는 경우가 있습니다. 결과 화면의 「썸네일 파일 보기」로 <code>thumb.jpg</code>를 찾고<br>스튜디오의 썸네일 칸에 끌어다 놓고 저장하면 됩니다. 30초면 끝납니다.</div>
+    <div class="note"><b>쇼츠 썸네일은 눈으로 확인하세요:</b> 프로그램은 썸네일을 올리기만 하고, 쇼츠에 실제로 걸렸는지는 보장하지 않습니다. 업로드 뒤 스튜디오에서 확인하고<br>안 걸렸으면 <code>thumb.jpg</code>를 썸네일 칸에 끌어다 놓고 저장하면 됩니다. 30초면 끝납니다.</div>
   </section>
 
   <section id="security">
@@ -378,6 +381,7 @@ footer p{max-width:none}
           <li>구글 OAuth 클라이언트 시크릿</li>
           <li>유튜브 채널 토큰 (refresh token)</li>
           <li>쿠팡파트너스 Access · Secret</li>
+          <li>인스타그램 · 스레드 토큰, R2 키</li>
           <li>설정 파일 자체</li>
         </ul>
       </div>
@@ -415,13 +419,13 @@ footer p{max-width:none}
     <details><summary>돈이 드나요?</summary><p>프로그램은 무료입니다. Gemini API·타입캐스트는 각자 계정의 사용량만큼 과금됩니다(Gemini는 무료 한도가 있습니다). 유튜브·쿠팡파트너스는 무료.</p></details>
     <details><summary>「유튜브 연결」에서 허용 화면이 안 떠요</summary><p><code>config</code> 폴더에 <code>youtube_client_secret.json</code>(본인이 만든 OAuth 앱 파일)이 있는지 먼저 보세요. 그리고 본인의 구글 클라우드 화면에서 내 계정을 <b>테스트 사용자</b>로 등록해야 합니다. 「확인되지 않은 앱」이 뜨면 → 고급 → (안전하지 않음)으로 이동.</p></details>
     <details><summary>일주일쯤 지나면 유튜브 연결이 끊깁니다</summary><p><b>프로그램의 제한이 아닙니다.</b> 구글 OAuth 앱을 「테스트(Testing)」 상태로 두면 구글이 발급한 로그인 권한을 <b>7일 뒤 만료</b>시킵니다(구글 공식 정책). 「+ 채널 추가 연결」을 다시 한 번 누르면 됩니다. 매주 다시 하기 싫으면 본인의 앱을 구글 심사에 올려 「게시(In production)」 상태로 바꿔야 합니다. 참고로 테스트 사용자는 최대 100명까지만 등록됩니다.</p></details>
-    <details><summary>인스타그램·스레드에도 올라가나요?</summary><p><b>지금 배포본에는 들어 있지 않습니다.</b> 이 배포본이 올리는 곳은 유튜브뿐입니다. 인스타 릴스·스레드 자동 게시는 다음 배포본 예정입니다.</p></details>
+    <details><summary>인스타그램·스레드에도 올라가나요?</summary><p><b>v2.0부터 선택 기능으로 들어왔습니다.</b> 설정 탭에 인스타·스레드 토큰과 R2 키를 넣으면, 유튜브에 올린 뒤 이어서 올립니다. 비워 두면 유튜브에만 올라갑니다. 다만 <b>실제 게시는 아직 검증 중</b>이라, 처음에는 결과를 눈으로 확인해 주세요. 준비물은 Meta 프로 계정·개발자 앱·R2 계정입니다 — 유튜브보다 손이 더 갑니다.</p></details>
     <details><summary>윈도우에서도 되나요?</summary><p>윈도우용 실행 파일(<code>시작.bat</code>)과 ffmpeg 자동 설치가 들어 있습니다. 다만 <b>실제 윈도우 PC에서의 최종 확인은 진행 중</b>입니다. 맥은 확인을 마쳤습니다.</p></details>
     <details><summary>쿠팡 검색 결과가 없다고 나와요</summary><p>키워드를 더 일반적인 말로 바꿔 보세요(예: 「스텐 반죽판」 → 「반죽판」). 쿠팡 검색은 시간당 횟수 제한이 있어 같은 키워드는 24시간 재사용합니다.</p></details>
     <details><summary>영상에 얼굴이 나오면요?</summary><p>올리지 마세요. 프로그램은 얼굴을 지우지 않습니다. 손·몸만 나오는 영상은 괜찮습니다.</p></details>
     <details><summary>포트 8790을 못 연다고 나와요</summary><p>이미 켜져 있는 겁니다. 브라우저에서 <code>http://127.0.0.1:8790/</code>을 열거나, 화면의 「종료」 후 다시 실행하세요.</p></details>
     <details><summary>윈도우에서 한글이 깨져 보여요</summary><p>검은 창의 글자만 깨지는 것이면 동작에는 문제없습니다. 화면(브라우저)은 정상입니다.</p></details>
-    <details><summary>업데이트는 어떻게 하나요?</summary><p>새 zip을 받아 압축을 풀고, 옛 폴더의 <code>config</code>·<code>input_videos</code>·<code>output</code> 폴더를 새 폴더로 옮기면 됩니다.</p></details>
+    <details><summary>업데이트는 어떻게 하나요?</summary><p>새 zip을 받아 압축을 풀고, 옛 폴더의 <code>config</code>·<code>input_videos</code>·<code>output</code> 폴더를 새 폴더로 옮기면 됩니다.<br><br><b>v1.2 이하에서 올라오신 분께:</b> 옛 <code>config</code> 안의 <code>youtube_client_secret.json</code> 은 <b>운영자의 OAuth 앱 파일</b>입니다. 그대로 두면 계속 그 앱을 쓰게 되고, 운영자 쪽 사용량 한도를 나눠 쓰게 됩니다. <b>본인 앱으로 바꾸시길 권합니다</b> — 만드는 방법은 매뉴얼의 「유튜브 계정 연결하기」에 있습니다.</p></details>
   </section>
 
   <footer>
