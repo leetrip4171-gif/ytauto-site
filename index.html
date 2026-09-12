@@ -176,10 +176,29 @@ footer{padding:44px 0 72px;color:var(--muted);font-size:14px;border-top:1px soli
 footer .rule{width:34px;height:1px;background:var(--gold);margin-bottom:18px;opacity:.8}
 footer p{max-width:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* 버전 고정 띠 (2026-09-12) — 어느 화면에서든 최신 버전이 바로 보이게 */
+.verbar{position:sticky;top:0;z-index:60;background:linear-gradient(90deg,#1b2b4b,#20406f);color:#fff;
+  font-size:15px;letter-spacing:-.2px;border-bottom:1px solid rgba(255,255,255,.14)}
+.verbar .wrap{display:flex;align-items:center;gap:14px;padding:9px 20px;flex-wrap:wrap}
+.verbar strong{font-size:17px;font-weight:800;color:#ffd63d}
+.verdate{opacity:.85}
+.verlist{opacity:.8;font-size:14px}
+.verdl{margin-left:auto;background:#ffd63d;color:#12203a;font-weight:800;border-radius:999px;
+  padding:5px 14px;text-decoration:none;white-space:nowrap}
+.verdl:hover{filter:brightness(1.06)}
+@media(max-width:640px){.verbar .wrap{gap:8px;padding:8px 14px}.verbar strong{font-size:16px}.verdl{margin-left:0}}
 </style>
 </head>
 <body>
 
+<div class="verbar" id="verbar">
+  <div class="wrap">
+    <strong>최신 버전 v2.0.4</strong>
+    <span class="verdate">2026-09-12 배포</span>
+    <a class="verdl" href="https://github.com/leetrip4171-gif/ytauto-site/releases/latest/download/ytauto_latest.zip">↓ 내려받기</a>
+  </div>
+</div>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#"><span class="mark">Y</span>영상 자동화 시스템</a>
