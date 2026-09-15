@@ -194,7 +194,7 @@ footer p{max-width:none}
 
 <div class="verbar" id="verbar">
   <div class="wrap">
-    <strong>최신 버전 v2.2.7</strong>
+    <strong>최신 버전 v2.2.8</strong>
     <span class="verdate">2026-09-15 배포</span>
     <a class="verdl" href="https://github.com/leetrip4171-gif/ytauto-site/releases/latest/download/ytauto_latest.zip">↓ 내려받기</a>
   </div>
@@ -337,12 +337,12 @@ footer p{max-width:none}
       <tbody>
         <tr><td>파이썬 3.10 이상</td><td class="req">필수</td><td><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a> — 윈도우는 설치 첫 화면에서 <b>Add python.exe to PATH</b> 체크</td></tr>
         <tr><td>Gemini API 키</td><td class="req">필수</td><td><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> — 영상 분석·대본·제품 매칭·이미지에 씁니다 (무료 한도 있음)</td></tr>
-        <tr><td>Claude Code + 클로드 구독</td><td class="req">커뮤니티형</td><td><a href="https://claude.ai/download" target="_blank" rel="noopener">claude.ai/download</a> — 커뮤니티형 쇼츠는 소재 고르기·사실 확인·대본 쓰기를 <b>내 컴퓨터의 Claude Code</b> 가 합니다. 설치한 뒤 터미널(맥)·명령 프롬프트(윈도우)에서 <code>claude</code> 를 한 번 실행해 로그인하세요. 쇼핑쇼츠만 쓸 거면 없어도 됩니다</td></tr>
+        <tr><td>Claude Code + 클로드 구독</td><td class="req">필수</td><td><a href="https://claude.ai/download" target="_blank" rel="noopener">claude.ai/download</a> — <b>내 컴퓨터의 Claude Code</b> 가 글을 씁니다. 쇼핑쇼츠는 제목·설명·썸네일 문구와 모델샷 검수에, 커뮤니티형은 소재 고르기·사실 확인·대본 쓰기에 씁니다. 설치한 뒤 터미널(맥)·명령 프롬프트(윈도우)에서 <code>claude</code> 를 한 번 실행해 로그인하세요</td></tr>
         <tr><td>유튜브 채널</td><td class="req">필수</td><td>구글 계정으로 한 번 「허용」. 그 전에 <b class="hl">본인의 구글 클라우드에서 OAuth 앱을 만들어</b> <code>youtube_client_secret.json</code> 파일을 <code>config</code> 폴더에 넣어야 합니다 (만드는 방법은 매뉴얼)</td></tr>
         <tr><td>쿠팡파트너스 키</td><td class="req">쇼핑쇼츠</td><td><a href="https://partners.coupang.com" target="_blank" rel="noopener">partners.coupang.com</a> → 링크 생성 → API 키 발급 (Access · Secret 두 개)</td></tr>
         <tr><td>Meta 계정</td><td class="opt">인스타·스레드</td><td>인스타그램을 <b>프로 계정</b>으로 바꾸고, Meta 개발자 콘솔에서 앱을 만들어 사용자 ID와 장기 토큰(60일)을 발급받습니다. 스레드도 따로 한 번 더</td></tr>
         <tr><td>Cloudflare R2</td><td class="opt">인스타·스레드</td><td>인스타·스레드는 <b>공개 영상 주소</b>를 받아 가는 방식이라, 잠깐 올려 둘 자리가 필요합니다. 무료 한도 안에서 씁니다</td></tr>
-        <tr><td>타입캐스트 키</td><td class="opt">선택</td><td><a href="https://typecast.ai" target="_blank" rel="noopener">typecast.ai</a> — 비우면 Gemini 음성으로 대신 만듭니다</td></tr>
+        <tr><td>타입캐스트 키</td><td class="req">필수</td><td><a href="https://typecast.ai" target="_blank" rel="noopener">typecast.ai</a> — 내레이션(문정)을 만듭니다. 이 키가 없으면 음성 단계에서 멈춥니다</td></tr>
         <tr><td>ffmpeg</td><td class="opt">자동</td><td>윈도우는 처음 실행 때 자동으로 내려받습니다(약 90MB). 맥은 터미널에서 <code>brew install ffmpeg</code></td></tr>
       </tbody>
     </table>
