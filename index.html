@@ -194,8 +194,8 @@ footer p{max-width:none}
 
 <div class="verbar" id="verbar">
   <div class="wrap">
-    <strong>최신 버전 v2.2.9</strong>
-    <span class="verdate">2026-09-15 배포</span>
+    <strong>최신 버전 v2.3.0</strong>
+    <span class="verdate">2026-09-16 배포</span>
     <a class="verdl" href="https://github.com/leetrip4171-gif/ytauto-site/releases/latest/download/ytauto_latest.zip">↓ 내려받기</a>
   </div>
 </div>
@@ -337,7 +337,10 @@ footer p{max-width:none}
       <tbody>
         <tr><td>파이썬 3.10 이상</td><td class="req">필수</td><td><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a> — 윈도우는 설치 첫 화면에서 <b>Add python.exe to PATH</b> 체크</td></tr>
         <tr><td>Gemini API 키</td><td class="req">필수</td><td><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> — 영상 분석·대본·제품 매칭·이미지에 씁니다 (무료 한도 있음)</td></tr>
-        <tr><td>Claude Code + 클로드 구독</td><td class="req">필수</td><td><a href="https://claude.ai/download" target="_blank" rel="noopener">claude.ai/download</a> — <b>내 컴퓨터의 Claude Code</b> 가 글을 씁니다. 쇼핑쇼츠는 제목·설명·썸네일 문구와 모델샷 검수에, 커뮤니티형은 소재 고르기·사실 확인·대본 쓰기에 씁니다. 설치한 뒤 터미널(맥)·명령 프롬프트(윈도우)에서 <code>claude</code> 를 한 번 실행해 로그인하세요</td></tr>
+        <tr><td>Claude Code + 클로드 구독</td><td class="req">필수</td><td><b>내 컴퓨터의 Claude Code</b> 가 글을 씁니다. 쇼핑쇼츠는 제목·설명·썸네일 문구와 모델샷 검수에, 커뮤니티형은 소재 고르기·사실 확인·대본 쓰기에 씁니다.<br>
+          <b class="hl">설치는 명령 한 줄입니다</b> — 윈도우는 파워셸에서 <code>irm https://claude.ai/install.ps1 | iex</code>, 맥은 터미널에서 <code>curl -fsSL https://claude.ai/install.sh | bash</code>. 끝나면 창을 닫고 새로 열어 <code>claude</code> 를 한 번 실행해 로그인하세요 (<a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">설치 안내</a>).<br>
+          <b class="hl">클로드 Pro·Max 구독이 필요합니다</b> — 무료 플랜으로는 안 됩니다. 구독 대신 <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a> 의 본인 API 키(쓴 만큼 과금)를 써도 됩니다. <b>둘을 동시에 두면 충돌합니다</b> — 한쪽만 남기세요<br>
+          <span class="meta">클로드 데스크톱 앱(claude.ai/download)을 깔아도 <code>claude</code> 명령은 생기지 않습니다. 위 설치 명령을 쓰세요.</span></td></tr>
         <tr><td>유튜브 채널</td><td class="req">필수</td><td>구글 계정으로 한 번 「허용」. 그 전에 <b class="hl">본인의 구글 클라우드에서 OAuth 앱을 만들어</b> <code>youtube_client_secret.json</code> 파일을 <code>config</code> 폴더에 넣어야 합니다 (만드는 방법은 매뉴얼)</td></tr>
         <tr><td>쿠팡파트너스 키</td><td class="req">쇼핑쇼츠</td><td><a href="https://partners.coupang.com" target="_blank" rel="noopener">partners.coupang.com</a> → 링크 생성 → API 키 발급 (Access · Secret 두 개)</td></tr>
         <tr><td>Meta 계정</td><td class="opt">인스타·스레드</td><td>인스타그램을 <b>프로 계정</b>으로 바꾸고, Meta 개발자 콘솔에서 앱을 만들어 사용자 ID와 장기 토큰(60일)을 발급받습니다. 스레드도 따로 한 번 더</td></tr>
@@ -371,6 +374,7 @@ footer p{max-width:none}
           <li><b>zip 내려받아 압축 풀기</b><p>바탕화면이나 문서 폴더에. 폴더 이름은 그대로 두세요.</p></li>
           <li><b><code>시작.bat</code> 더블클릭</b><p>파이썬이 없으면 설치 페이지가 열립니다. 설치한 뒤 다시 더블클릭.</p></li>
           <li><b>기다리기</b><p>처음엔 ffmpeg(90MB)과 파이썬 패키지를 내려받습니다. 끝나면 브라우저에 화면이 뜹니다.</p></li>
+          <li><b><code>초기설정_연결.bat</code> 더블클릭</b><p>처음 한 번만. 유튜브 채널 연결과 스튜디오 로그인을 이어서 합니다. 창이 열리면 <b>올릴 채널의 구글 계정</b>으로 로그인하고 「허용」.</p></li>
         </ol>
         <div class="note"><b>「Windows의 PC 보호」</b>가 뜨면 「추가 정보」 → 「실행」.</div>
       </div>
@@ -380,6 +384,7 @@ footer p{max-width:none}
           <li><b>zip 내려받아 압축 풀기</b><p>다운로드 폴더에서 더블클릭하면 풀립니다.</p></li>
           <li><b><code>시작.command</code> 우클릭 → 열기</b><p>처음 한 번 「확인되지 않은 개발자」가 뜨면 우클릭 → 열기 → 열기. 그다음부턴 더블클릭.</p></li>
           <li><b>ffmpeg 없다고 하면</b><p>터미널에 <code>brew install ffmpeg</code> 입력 후 다시 실행. (Homebrew가 없으면 <a href="https://brew.sh" target="_blank" rel="noopener">brew.sh</a>)</p></li>
+          <li><b><code>초기설정_연결.command</code> 실행</b><p>처음 한 번만. 유튜브 채널 연결과 스튜디오 로그인을 이어서 합니다.</p></li>
         </ol>
       </div>
     </div>
