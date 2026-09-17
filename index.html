@@ -194,8 +194,8 @@ footer p{max-width:none}
 
 <div class="verbar" id="verbar">
   <div class="wrap">
-    <strong>최신 버전 v2.3.1</strong>
-    <span class="verdate">2026-09-16 배포</span>
+    <strong>최신 버전 v2.3.3</strong>
+    <span class="verdate">2026-09-17 배포</span>
     <a class="verdl" href="https://github.com/leetrip4171-gif/ytauto-site/releases/latest/download/ytauto_latest.zip">↓ 내려받기</a>
   </div>
 </div>
@@ -462,7 +462,10 @@ footer p{max-width:none}
     <details><summary>영상에 얼굴이 나오면요?</summary><p>올리지 마세요. 프로그램은 얼굴을 지우지 않습니다. 손·몸만 나오는 영상은 괜찮습니다.</p></details>
     <details><summary>포트 8790을 못 연다고 나와요</summary><p>이미 켜져 있는 겁니다. 브라우저에서 <code>http://127.0.0.1:8790/</code>을 열거나, 화면의 「종료」 후 다시 실행하세요.</p></details>
     <details><summary>윈도우에서 한글이 깨져 보여요</summary><p>검은 창의 글자만 깨지는 것이면 동작에는 문제없습니다. 화면(브라우저)은 정상입니다.</p></details>
-    <details><summary>업데이트는 어떻게 하나요?</summary><p>새 zip을 받아 압축을 풀고, 옛 폴더의 <code>config</code>·<code>input_videos</code>·<code>output</code> 폴더를 새 폴더로 옮기면 됩니다.<br><br><b>v1.2 이하에서 올라오신 분께:</b> 옛 <code>config</code> 안의 <code>youtube_client_secret.json</code> 은 <b>운영자의 OAuth 앱 파일</b>입니다. 그대로 두면 계속 그 앱을 쓰게 되고, 운영자 쪽 사용량 한도를 나눠 쓰게 됩니다. <b>본인 앱으로 바꾸시길 권합니다</b> — 만드는 방법은 매뉴얼의 「유튜브 계정 연결하기」에 있습니다.</p></details>
+    <details><summary>업데이트는 어떻게 하나요?</summary><p><b>v2.3.2부터 「업데이트」 입구가 있습니다.</b><br>① 옛 버전의 검은 창과 크롬 자동화 창을 닫습니다.<br>② 새 zip을 옛 폴더 <b>옆</b> 새 폴더에 풉니다 (예: <code>C:\ytauto</code> 옆에 <code>C:\ytauto_v2.3.2</code>). 옛 폴더 위에 덮어 풀지 마세요.<br>③ 새 폴더의 <code>업데이트.bat</code>(맥: <code>업데이트.command</code>)을 더블클릭합니다. 옛 폴더의 키·유튜브 연결·로그인·설정을 백업한 뒤 새 폴더로 옮기고, 영상이 쌓인 작업 폴더는 크기를 보여 주고 옮길지 묻습니다.<br>④ 새 폴더의 <code>시작.bat</code>을 실행합니다. 잘 되면 옛 폴더는 직접 지우세요. 문제가 있으면 옛 폴더를 그대로 쓰면 됩니다 — 옛 폴더는 건드리지 않습니다.<br><br><code>config</code> 폴더를 통째로 옮기지 마세요. 새 버전에서 고친 프로그램 설정까지 옛것으로 돌아갑니다.<br><code>_설정백업</code> 폴더의 zip에는 키가 들어 있습니다. 남에게 보내지 마세요.<br><br><b>v1.2 이하에서 올라오신 분께:</b> 옛 <code>config</code> 안의 <code>youtube_client_secret.json</code> 은 <b>운영자의 OAuth 앱 파일</b>입니다. 본인 앱으로 바꾸시길 권합니다 — 만드는 방법은 매뉴얼의 「유튜브 계정 연결하기」에 있습니다.</p></details>
+    <details><summary>Gemini 점검이 「한도 초과」(429)로 나와요</summary><p>고장이 아니라 무료 사용량을 다 쓴 것입니다. 오후 4시쯤(미국 자정) 풀립니다. 급하면 <code>aistudio.google.com/apikey</code> → 「API 키 만들기」에서 <b>새 프로젝트에서 만들기</b>를 고르세요. 이미 쓰던 프로젝트에 키만 새로 만들면 다 쓴 한도를 같이 쓰기 때문에 계속 429가 납니다.</p></details>
+    <details><summary>내 채널이 아닌 다른 사람 채널에도 올릴 수 있나요?</summary><p>됩니다. 채널 주인이 유튜브 설정 → 「관리자 추가」에서 내 구글 계정을 <b>관리자</b>로 넣어 주면(브랜드 계정이어야 합니다), 커뮤니티형 폴더의 <code>추가채널_연결</code>을 실행해 별명(예: chulsoo)으로 그 채널을 연결하세요. 브라우저의 「채널 선택」 화면에서 그 사람 채널을 고르는 것이 핵심입니다. 올릴 편의 작업 폴더에 <code>채널.txt</code>(별명 한 줄)를 두면 그 채널로 올라가고, 없으면 내 기본 채널입니다. 유튜브 API 하루 한도(업로드 약 6편)는 채널을 합쳐 셉니다.</p></details>
+    <details><summary>점검 배지가 주황색이에요</summary><p>「처음 설정이 필요합니다」는 키나 유튜브 연결이 아직 없다는 뜻입니다. 화면 위 「설정」에서 키를 넣고 「저장하고 점검」, 유튜브는 <code>초기설정_연결</code>을 실행하세요. 빨간색만 진짜 오류입니다.</p></details>
   </section>
 
   <footer>
